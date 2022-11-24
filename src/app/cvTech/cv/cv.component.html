@@ -1,0 +1,16 @@
+<div class="row">
+<div class="col-md-6">
+<app-listecv (SendPersonToDetail)="getPerson($event)" [personnes]="personnes"> 
+</app-listecv >
+</div>
+<div class="col-md-6">
+    <app-detail-cv 
+    *ngIf="personInput"
+    [person]="personInput" >
+
+    </app-detail-cv>
+</div> 
+</div>
+<div class="row">
+    <app-embauche></app-embauche>
+</div>

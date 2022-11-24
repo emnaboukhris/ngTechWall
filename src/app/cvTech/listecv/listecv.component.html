@@ -1,0 +1,3 @@
+<ol class="list-group" *ngFor="let person of personnes">
+    <app-item-cv  (sendPersonneEvent)="sendPersonne($event)"[personne]="person" > {{person.name}}</app-item-cv>
+</ol>

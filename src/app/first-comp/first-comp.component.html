@@ -1,0 +1,13 @@
+<div  [hidden]="show" [style.backgroundColor]="color">
+    binding 
+    {{color}}
+</div>
+<button class="btn btn-danger"
+(click)="changeStatus()"
+
+>Allumer/eteindre</button>
+<!-- <input #inputValue (change)="changeColor(inputValue)"  type="text" class="form-control"> -->
+<input [(ngModel)]="color" type="text" class="form-control">
+<app-fils  
+(sendRequestToData)="processReq($event)"
+[filsProp]="color"></app-fils>

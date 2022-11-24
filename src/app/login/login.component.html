@@ -1,0 +1,29 @@
+<form #loginFormulaire="ngForm">
+ <label for="email"> Email </label>
+ <input  
+ email required 
+ type="text"
+ ngModel name="email"
+ id="email"
+ #emailInput="ngModel"
+ class="form-control" >
+ <div class="alert alert-danger" *ngIf="emailInput.invalid && emailInput.dirty"> 
+    l'email n'ai pas valide
+ </div>
+
+ <label for="password"> Password </label>
+ <input  
+  required minlength="4"
+ type="password"
+ ngModel name="password"
+ #pwdInput="ngModel"
+ id="password"
+ class="form-control" >
+ <div class="alert alert-danger" *ngIf="pwdInput.invalid && pwdInput.touched"> 
+    le mdp n'ai pas valide
+ </div>
+<br/>
+ <button [disabled]="loginFormulaire.invalid" class="btn btn-primary" (click)="login(loginFormulaire.value)">
+    Se Connecter
+ </button>
+</form>

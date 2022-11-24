@@ -1,0 +1,15 @@
+<p [ngStyle]="{
+    'color':color, 
+    'backgroundColor': bgcolor, 
+    'font-size':size
+}">style works!</p>
+<input type="text" class="form-control"
+[(ngModel)]="color"
+>
+<input type="number"  #sizeInput class="form-control"
+(change)="changeSize(sizeInput)"
+>
+<button (click)="loggerMesData()">test Data</button>
+
+<button (click)="goToCv()">goToCv</button>
+<app-class></app-class>
